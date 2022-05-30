@@ -29,10 +29,24 @@
     }
   },
   "prettier": {
+    "parser": "typescript",
+    "arrowParens": "always",
+    "bracketSameLine": false,
+    "bracketSpacing": true,
+    "embeddedLanguageFormatting": "auto",
+    "htmlWhitespaceSensitivity": "css",
+    "insertPragma": false,
+    "jsxSingleQuote": false,
     "printWidth": 100,
+    "proseWrap": "preserve",
+    "quoteProps": "as-needed",
+    "requirePragma": false,
     "semi": true,
-    "singleQuote": true,
-    "trailingComma": "es5"
+    "singleQuote": false,
+    "tabWidth": 2,
+    "trailingComma": "none",
+    "useTabs": false,
+    "vueIndentScriptAndStyle": false
   },
   "name": "yup-phone-js",
   "description": "Add Yup validation for phone numbers",
