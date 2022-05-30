@@ -16,8 +16,12 @@ export function validatePhone(value: unknown, options: YupPhoneOptions): boolean
       return false;
     }
 
-    if (options.validCountries && Array.isArray(options.validCountries)) {
-      if (!phoneNumber.country || !options.validCountries.includes(phoneNumber.country)) {
+    if (options.validCountries) {
+      const validCountries = Array.isArray(options.validCountries)
+        ? options.validCountries
+        : [options.validCountries];
+
+      if (!phoneNumber.country || !validCountries.includes(phoneNumber.country)) {
         return false;
       }
     }
