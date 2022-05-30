@@ -23,7 +23,7 @@ export function validatePhone(value: unknown, options: YupPhoneOptions): boolean
     }
 
     return !options.strictValidation || phoneNumber.isValid();
-  } catch (e: unknown) {
+  } catch (e) {
     console.warn("Error validating phone number:", e);
     return false;
   }

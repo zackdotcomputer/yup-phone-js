@@ -8,7 +8,7 @@ export interface YupPhoneOptions {
    * If undefined, the libphonenumber-js default parsing logic will be used.
    * If defined and an array, the default parsing logic will be used and then the
    * validation will fail if the parsed number is not apparently from a requested country.
-   * 
+   *
    * @default undefined
    */
   validCountries?: CountryCode | CountryCode[] | undefined;
