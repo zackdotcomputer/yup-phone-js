@@ -1,0 +1,84 @@
+{
+  "version": "0.1.0",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=12"
+  },
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build",
+    "size": "size-limit",
+    "analyze": "size-limit --why"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zackdotcomputer/yup-phone-js"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 100,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "name": "yup-phone-js",
+  "description": "Add Yup validation for phone numbers",
+  "author": {
+    "name": "Zack Sheppard",
+    "email": "yup@zacksheppard.com",
+    "url": "https://zacksheppard.com"
+  },
+  "keywords": [
+    "validation",
+    "schema",
+    "yup",
+    "phone",
+    "number",
+    "yup-phone",
+    "libphonenumber-js",
+    "yup-phone-js"
+  ],
+  "module": "dist/yup-phone-js.esm.js",
+  "size-limit": [
+    {
+      "path": "dist/yup-phone-js.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/yup-phone-js.esm.js",
+      "limit": "10 KB"
+    }
+  ],
+  "peerDependencies": {
+    "yup": "^0.30.0|^0.31.0|^0.32.0"
+  },
+  "devDependencies": {
+    "@size-limit/preset-small-lib": "^7.0.8",
+    "@types/yup": "^0.29.14",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^8.0.1",
+    "prettier": "^2.6.2",
+    "size-limit": "^7.0.8",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.4.0",
+    "typescript": "^4.7.2",
+    "yup": "^0.32.11"
+  },
+  "dependencies": {
+    "libphonenumber-js": "^1.10.6"
+  }
+}
